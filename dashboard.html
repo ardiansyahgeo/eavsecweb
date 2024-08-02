@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EAVSEC</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .header .title {
+            flex: 1;
+            text-align: center;
+        }
+
+        .menu-bar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu {
+            position: relative;
+            display: inline-block;
+        }
+
+        .menu button {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+
+        .menu button:hover {
+            background-color: #555;
+        }
+
+        .title-box {
+            text-align: center;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a {
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f1f1f1;
+        }
+
+        .menu:hover .dropdown-content {
+            display: block;
+        }
+
+        .submenu-content {
+            display: none;
+            position: absolute;
+            left: 100%;
+            top: 0;
+            background-color: #f9f9f9;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            min-width: 160px;
+        }
+
+        .dropdown-content a:hover .submenu-content {
+            display: block;
+        }
+
+        .content {
+            flex: 1;
+            display: flex;
+        }
+
+        iframe {
+            flex: 1;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+<div class="title-box">
+    <h1>E-AVSEC GARUDA INDONESIA</h1>
+</div>
+<div class="header">
+    <div class="menu-bar">
+        <div class="menu">
+            <button>DASC</button>
+            <div class="dropdown-content">
+                <a href="#">Database Station
+                    <div class="submenu-content">
+                        <a href="#">Station A</a>
+                        <a href="#">Station B</a>
+                        <a href="#">Station C</a>
+                    </div>
+                </a>
+                <a href="#">Database Cargo</a>
+            </div>
+        </div>
+        <div class="menu">
+            <button>Special Category Passenger</button>
+        </div>
+        <div class="menu">
+            <button>Pengangkutan Senjata Api</button>
+        </div>
+        <div class="menu">
+            <button>Cargo Screening Entity</button>
+        </div>
+        <div class="menu">
+            <button>Airport Pass Submission</button>
+        </div>
+        <div class="menu">
+            <button>Avsec Dissemination</button>
+        </div>
+        <div class="menu">
+            <button>Detection</button>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <iframe src="https://ardiansyahgeo.github.io/mapsavsec/"></iframe>
+</div>
+</body>
+</html>
